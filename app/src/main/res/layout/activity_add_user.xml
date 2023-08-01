@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUsersActivity">
+
+
+    <Button
+        android:id="@+id/btnImgChooser"
+        android:layout_width="100dp"
+        android:layout_height="58dp"
+        android:onClick="onClickReadImage"
+        android:text="Choose Image"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/editTextEtunimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Etunimi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextSukunimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sukunimi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEtunimi" />
+
+    <EditText
+        android:id="@+id/editTextSahkoposti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sähköpostiosoite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSukunimi" />
+
+    <RadioGroup
+        android:id="@+id/rgDegreeProgram"
+        android:layout_width="189dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSahkoposti">
+
+        <RadioButton
+            android:id="@+id/rbTite"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Tietotekniikka" />
+
+        <RadioButton
+            android:id="@+id/rbTuta"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Tuotantotalous" />
+
+        <RadioButton
+            android:id="@+id/rbLT"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Laskennallinen tekniikka" />
+
+        <RadioButton
+            android:id="@+id/rbSate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Sähkötekniikka" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:onClick="onClickAddUser"
+        android:text="Lisää"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram" />
+
+    <ImageView
+        android:id="@+id/ivUserPreview"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnImgChooser"
+        app:srcCompat="@drawable/portrait_placeholder" />
+
+    <RadioGroup
+        android:id="@+id/rgDegree"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram">
+
+        <CheckBox
+            android:id="@+id/cbKandi"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Kandidaatin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/cbDI"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Diplomi-insinöörin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/cbTKT"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Tekniikan tohtorin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/cbUima"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Uimamaisteri" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
